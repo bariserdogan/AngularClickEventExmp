@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>First App</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/custom/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/custom/custom.js"></script>
+	
+</head>
+<body>	
+	<div class="container">
+		<div class="row" ng-app="Language">
+			<div class="col-xs-10 col-xs-offset-1" ng-controller="langController">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Dil Adı</th>
+							<th>Like</th>
+							<th>Dislike</th>
+							<th>Like/Dislike</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="language in languages">
+							<td> {{language.name}} </td>
+							<td> {{language.like}} </td>
+							<td> {{language.dislike}}</td>
+							<td>
+								<input type="button" name="like" id="like" value="Like" ng-click="likePlus(language)">
+								<input type="button" name="dislike" id="dislike" ng-click="dislikePlus(language)" value="Dislike">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

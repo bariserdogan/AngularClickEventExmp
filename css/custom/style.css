@@ -1,0 +1,6 @@
+.container .row{
+	padding-top:2em;
+}
+.container .row .col-md-6{
+	border-bottom: 2px solid #ddd;
+}
